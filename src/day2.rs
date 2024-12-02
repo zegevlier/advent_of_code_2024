@@ -107,10 +107,7 @@ pub fn part2(input: &str) -> i32 {
         let line_split = line.split(' ').collect();
 
         if verify_line(line_split, false) {
-            dbg!("GOOD", line);
             total += 1;
-        } else {
-            dbg!("BAD", line);
         }
     }
 
