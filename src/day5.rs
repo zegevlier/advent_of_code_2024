@@ -1,4 +1,4 @@
-use std::{borrow::Borrow, collections::HashSet, vec};
+use std::collections::HashSet;
 
 use aoc_runner_derive::aoc;
 
@@ -71,7 +71,7 @@ pub fn part2(input: &str) -> i32 {
         // These are the input.
         let elements: Vec<u8> = line.split(',').map(|n| n.parse::<u8>().unwrap()).collect();
 
-        let mut elements_set: HashSet<&u8> = HashSet::from_iter(elements.iter());
+        let elements_set: HashSet<&u8> = HashSet::from_iter(elements.iter());
 
         let mut relevant_rules = rules
             .iter()
